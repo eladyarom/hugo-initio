@@ -16,7 +16,7 @@
 
 			{{ if .Site.Params.footerEnableFollowme }}
 			<div class="col-md-3 widget">
-				<h3 class="widget-title">Follow me</h3>
+				<h3 class="widget-title">Follow us</h3>
 				<div class="widget-body">
 					<p class="follow-me-icons">
                         {{ range .Site.Params.social }}
@@ -43,7 +43,12 @@
 			<div class="col-md-3 widget">
 				<h3 class="widget-title">Form widget</h3>
 				<div class="widget-body">
-					<p>{{ .Site.Params.phone }}<br>
+					<p><form method="POST" action="https://formspree.io/hello@thewanderingconsultants.com">
+  	                                   <input name="email" placeholder="Your email" type="email" width="162px">
+                                           <br><br><textarea name="message" placeholder="Your message"></textarea>
+                                           <br><br><button type="submit">Send</button>
+                                           </form><br>
+					{{ .Site.Params.phone }}<br>
 						<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
 						<br>
                         {{ .Site.Params.address }}
